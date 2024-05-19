@@ -1,14 +1,15 @@
 # Consumir API REST con #ANGULAR 17 con MANEJO DE ERRORES e INTERCEPTORS
 En Angular, un "interceptor" es una clase que implementa la interfaz HttpInterceptor y se utiliza para interceptar y manipular solicitudes HTTP y sus respuestas. Los interceptores son una característica poderosa de Angular que permiten modificar las solicitudes y respuestas antes de que lleguen al servidor o al cliente respectivamente. Esto es útil para varias tareas comunes como:
  
-Autenticación y Autorización: Agregar tokens de autenticación a las cabeceras de las solicitudes.
-Registro y Seguimiento: Registrar o rastrear las solicitudes y respuestas para depuración o auditoría.
-Manejo de Errores: Atrapar y procesar errores HTTP globalmente.
-Manipulación de Solicitudes y Respuestas: Modificar las solicitudes antes de que se envíen o las respuestas antes de que lleguen a la aplicación
+Autenticación y Autorización: Agregar tokens de autenticación a las cabeceras de las solicitudes.  
+Registro y Seguimiento: Registrar o rastrear las solicitudes y respuestas para depuración o auditoría.  
+Manejo de Errores: Atrapar y procesar errores HTTP globalmente.  
+Manipulación de Solicitudes y Respuestas: Modificar las solicitudes antes de que se envíen o las respuestas antes de que lleguen a la aplicación  
 
 ![romina_navarrete_angular17_frontend](https://github.com/rominarg/Interceptors_httpClient_angular17/assets/45200064/02844798-7792-47e1-8fde-61b2e3833c4b)
 
 
+#¿Como creamos un Interceptors en Angular 17?
 ----------------------------------------------
 
 # AngularHttp

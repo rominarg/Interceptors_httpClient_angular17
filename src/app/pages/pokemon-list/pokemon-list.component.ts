@@ -14,13 +14,19 @@ import { PokemonResults } from '../../interfaces/pokemon';
   styleUrl: './pokemon-list.component.css'
 })
 export class PokemonListComponent implements OnInit {
+   // Observable que contendrá los resultados de Pokémon
   public pokemonResults$!: Observable<PokemonResults>;
+  // Mensaje de error en caso de fallo
   public errorMessage!: string;
+  // Inyección del servicio de Pokémon
   constructor(private service: PokemonService) { }
-
+  // Método del ciclo de vida que se ejecuta al inicializar el componente
   ngOnInit(): void {
+    // Obtener la lista de Pokémon del servicio y manejar posibles errores
     this.pokemonResults$ = this.service.getPokemonList().pipe(catchError((error: string) => {
+      // Asignar mensaje de error en caso de fallo
       this.errorMessage = error;
+      // Devolver un observable vacío para no interrumpir el flujo
       return EMPTY;
     }))
   }

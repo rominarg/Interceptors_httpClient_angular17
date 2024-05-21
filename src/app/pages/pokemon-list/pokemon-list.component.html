@@ -1,13 +1,19 @@
+<!-- Verifica si `pokemonResults$` ha emitido algún valor -->
 @if (pokemonResults$ | async; as resultObject) {
+   <!-- Si hay un resultado, muestra una lista de Pokémon -->
   <ul class="pokemon-list">
+    <!-- Itera sobre cada elemento en `resultObject.results` -->
     @for (item of resultObject.results; track item.name) {
       <li>
+         <!-- Usa el componente `app-pokemon-item` para mostrar información del Pokémon -->
         <app-pokemon-item [pokemonInfo]="item" />
       </li>
     }
   </ul>
 }
 
+<!-- Verifica si hay un mensaje de error -->
 @if (errorMessage) {
+  <!-- Si hay un error, muestra el componente de mensaje de error -->
   <app-error-message [errorMessage]="errorMessage" />
 }

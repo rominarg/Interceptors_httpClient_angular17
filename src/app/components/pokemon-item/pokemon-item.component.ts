@@ -9,5 +9,5 @@ import { Pokemon } from '../../interfaces/pokemon';
   styleUrl: './pokemon-item.component.css'
 })
 export class PokemonItemComponent {
-  
+  @Input() pokemonInfo!: Pokemon;
 }
